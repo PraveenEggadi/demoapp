@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { ConfigResponse } from '../app.component';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PowerBIService {
+ 
+  constructor(private http: HttpClient) {}
+
+
+  getEmbedConfig(endpoint: string): Observable<ConfigResponse> {
+    const response:ConfigResponse = {
+      Id: '1f528e71-1032-4614-b478-ae5887058f99',
+      EmbedUrl: 'https://app.powerbi.com/reportEmbed?reportId=1f528e71-1032-4614-b478-ae5887058f99&groupId=883daf4b-6b56-40a9-83f2-56d8b52a48cc',
+      EmbedToken: {
+        Token: 'H4sIAAAAAAAEAB3St66tBgBE0X-5LZbIcLD0CnLOmY6cM4dk-d995X5Xa-afHyt9hjktfv7-mVgAfLdd9LzZKNQ5LqlRomqrwp6bFC13zBs_mpI6Rks7yzRE2vZ1wbtgKOSdhBm_F7rpSnoJpY-yzz5QwkW8o2EqbCCa0WuxV9UzQyUy26mZBC0G7wXELoEpmKHrJ75EvdEeBDD2AXC5bk90LFR0Z0831UFbJJyAc3xDF7Qsip5qPhnM67E3elEkUZra7LESyoxKjMUFDuiYBmJBVGBxhhBW7YEtIL_3nsEKW7roAei1WioR77TM3tunyPo8Z0bZrWe0SiIieoQgtImVQHmeFq3kMY5jgFelZU5iJEAfGMawvFe6QETuHPs43hAKy5BfpHRDffg0MJizkheIN_LCKSeN9SJM4V6LSOXjOMVu5KGwlZWkOTteLwifPsVJqTYsYY-itkH28xtzLjBJQP1kW0iAdh5HW6Lk-0wVTIPd2-5-8Ri6V8bF46GY4HUdZm7xrd_1Dhr2FbIoC1uweyffVkoAjTUgTrYnFlFU04rDYedmx8fz325IWArjbyXK5xPjG7BJBLgggqF36ax9xzGQbmxQrLVuGVZPeiwj1RscOe5VzZLRbytYq_UlqioT01I2OJTJ52P9CC7RaXSad1xHzy4LaPHKA2Ph6US4oMdRttB8u56DRr6B60q9v21dN32wzYpL7yh1p0EY2eR619E1FkUHrwxwm1eNfT5Y2Sm0PNRSEkPNKOXRXgQVJ0_yp2tQUaYRZRA0CaZAbay5RUal8MbDxAG8UEC7u6QibFKIsb66_c_PXz_s9izHrJbP7_U9JI9Ltwn19B2dEbRlWGzfmilFhQbVB-BIPiFv_PiuJMRJMnLSS9f0vKrQpACZE-KOi0uIqwj5dyzUmSR5C8Vg-DbVJmujUaassVKflrPniUVX4DsgPltcOF2lTNg6oFFm3UFgoO05GjqACBfBvVkTTYoV8PCVv5tFD34-8pWBi3fbSDrwTjFR-Qy75kqmD7Vc1cYdkhdlvPIFmFmYfYhaIJTYJgX-TPqMB1faWaWZ6OLmnVBG52nAr10RkFAbGldBkvDvnY_aBZV1_vTxdX-z0xwmZb2ECEPzMXWb1x-U78GqCx1w-ldr1U88UyBlnQEneKHLducBpiY3sfEqqON9RfWf_5mfpSk3OfhVVsF02zuBiIdEaIcQiwwHuq7_K7etp_T4buVvFkCIBH8z1l61lJyW3RS4umrlmIafxA2pV1RPo_hwSCbTDd_gR5-1gfUJj-2QLKuBx2mzn8LxRimYUiWvWlFJqwbZ5148tHHFipLtQRehicZxmxmrCbvSA6dlfP9qBM-n3Hwz7AXP5KzUPSycYZgdWjz8Sm9KWPR00KVISSyDUMYS-G-23VN8m0ZBIZuGG14TmHUXP4G39VFsbLmH2lTgcgMGNO2TJGpkgxfLPspeXOS31bjNlvtUh_X3QqE8CFs-Si-DS0r842m3V5agZkALuahLWsnkE0Zp_BXSb67EMpThenxuKb1hV5teO4_oGZi-falGX5EeSlMW3cYjRC9wTsCzf5n__Q9GnVxh7gUAAA==.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUNFTlRSQUwtQi1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZXhwIjoxNzMxMDUyODI4LCJhbGxvd0FjY2Vzc092ZXJQdWJsaWNJbnRlcm5ldCI6dHJ1ZX0='
+      }
+    }
+    return of(response);
+  }
+}

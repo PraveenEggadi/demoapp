@@ -1,0 +1,19 @@
+  <div class="container">
+    <div class="header">Power BI Embedded Angular Component Demo</div>
+  
+    <div class="controls">
+      <ng-container *ngIf="isEmbedded">
+        <button (click)="changeVisualType()">Change visual type</button>
+      </ng-container>
+
+      <mat-tab-group *ngIf="isEmbedded" (selectedIndexChange)="switchPage($event)">
+        <mat-tab *ngFor="let page of pages" [label]="page.displayName"></mat-tab>
+      </mat-tab-group>
+  
+      <ng-container *ngIf="isEmbedded">
+        <powerbi-report [embedConfig]="reportConfig" [cssClassName]="reportClass" [phasedEmbedding]="phasedEmbeddingFlag">
+        </powerbi-report>
+      </ng-container>
+    </div>
+  </div>
+  
